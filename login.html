@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amico | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>AMICO</h1>
+        <p>Creator Portal</p>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="handleLogin()">Enter</button>
+        <p id="error">Wrong credentials!</p>
+    </div>
+
+    <script>
+        function handleLogin() {
+            if (document.getElementById("username").value === "amicohtml" &&
+                document.getElementById("password").value === "amico123") {
+                window.location.href = "index.html";
+            } else {
+                document.getElementById("error").style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
